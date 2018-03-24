@@ -7,12 +7,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+
+
+
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
 
     private TextView thedate;
     private Button btngocalendar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -7,9 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.CalendarView;
 
-/**
- * Created by ganesh on 6/10/2017.
- */
+
 
 public class CalendarActivity extends AppCompatActivity {
 
@@ -23,8 +21,9 @@ public class CalendarActivity extends AppCompatActivity {
         mCalendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(CalendarView CalendarView, int year, int month, int dayOfMonth) {
-                String date = year + "/" + month + "/"+ dayOfMonth ;
-                Log.d(TAG, "onSelectedDayChange: yyyy/mm/dd:" + date);
+                month++;
+                String date = month + "/" + dayOfMonth + "/"+ year ;
+                Log.d(TAG, "onSelectedDayChange: mm/dd/yyyy:" + date);
                 Intent intent = new Intent(CalendarActivity.this,MainActivity.class);
                 intent.putExtra("date",date);
                 startActivity(intent);
